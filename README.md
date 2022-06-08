@@ -1,1 +1,3 @@
-"# django_url_shortner" 
+# Django URL Shortner
+
+Basic django for beginner project.
