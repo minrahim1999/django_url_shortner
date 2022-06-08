@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Url Shortner</title>
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+  </head>
+  <body>
+    <main>
+      <h1>Url Shortner</h1>
+      <form id="post-form">
+        {% csrf_token %}
+        <input type="text" placeholder="Enter URL here" name="link" id="link" />
+        <div class="buttons">
+          <button type="submit" id="shortner">Shortner</button>
+        </div>
+      </form>
+      <section id="result"><h2></h2></section>
+    </main>
+    <script src="{% static 'js/main.js' %}"></script>
+  </body>
+</html>
